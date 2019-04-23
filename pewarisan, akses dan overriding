@@ -1,0 +1,36 @@
+package manusia;                                                      //nama package
+
+public class Manusia {                                                //nama klass
+    
+    public static void main(String[] args) {
+        Phinkhy input = new Phinkhy();                                //pengenalan objek dari klass lain
+        System.out.println("Phinkhy Carles Wiseptya");                //penampilan nama
+        input.melihat();                                              //untuk menampilkan method melihat dari klass Phinkhy
+        input.dengar();                                               //untuk menampilkan method dengar dari klass Phinkhy
+        System.out.println ("Jumlah saudara : " + input.saudara);     //untuk menampilkan method saudara dari klass Phinkhy
+        input.keluarga();                                             //untuk menampilkan method keluarga dari klass Phinkhy
+    }
+    void dengar(){                                                    // method overrid
+    System.out.println("Masih bisa dengar kok");                      //isi metod dengar dari klass Manusia
+    }
+}
+
+package manusia;
+
+public class Phinkhy extends Manusia{                                //nama klass yang sudah mewarisi klass Manusia
+    void dengar(){                                                   //method overriding
+    System.out.println("Masih bisa dengar kok");                     //isi metod dengar dari klass Phinkhy
+    }
+    void melihat(){                                                  //metod melihat dari klass Phinkhy
+    System.out.println("Bisa melihat sekitar");                      //isi metod melihat dari klass Phinkhy
+    }
+    protected int saudara;                                           //akses protected
+    public Phinkhy(){                                                //metod Phinkhy
+        saudara = 5;                                                 //pemberian nilai variable saudara
+    }
+    
+    protected void keluarga(){                                       //method keluarga dengan akses protected
+        System.out.println("Masih HIDUP semua");                     //isi metod keluarga dari klass Phinkhy
+    }
+}
+
